@@ -1,0 +1,41 @@
+body {
+  background-color: #2b524a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chewy-font {
+  font-family: "Chewy", cursive;
+  color: #d9a74a;
+  letter-spacing: 3px;
+}
+
+.get-started-btn {
+  background-color: #2b524a;
+  border: 2px solid #fff;
+  color: white;
+  padding: 0.75rem 3rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  transform: scale(1.15);
+  background-color: #23443d;
+}
+
+.about-text {
+  max-width: 700px;
+  text-align: justify;
+}
+
+.slogan-font {
+  font-family: "Fredoka", sans-serif;
+}
+
+.about-font {
+  font-family: "Nunito", sans-serif;
+}

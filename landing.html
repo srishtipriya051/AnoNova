@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Talk Tales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #476b6d 0%, #789da5 100%);
+            color: white;
+        }
+
+        .main-content {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .display-4 {
+            font-weight: 900;
+            font-size: 2.8rem;
+            font-family: cursive;
+            color: #d2b26f;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .lead {
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 2rem auto;
+            line-height: 1.6;
+            color: #e6e6e6;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .get-started-btn {
+            margin-top: 2rem;
+        }
+
+        .btn-primary {
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: #5d8287;
+            border: 1px solid #f5f8f8bc;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            border: 1px solid #f5f8f8bc;
+            background: #5d8287;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInScale 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="animate-in">
+           
+             <img src="{{ url_for('static', filename='logo.png') }}" alt="TalkTales Logo" style="width:160px; margin-bottom: 1.5rem; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+            <h1 class="display-4">Welcome to TalkTales</h1>
+            <p class="lead">Everyone has something to say</p>
+
+            <div class="description">
+                <p>TalkTales is a platform built on the belief that everyone has something to say — whether it's a
+                    hidden truth,
+                    an untold story, or just a funny moment worth sharing. But unlike most social platforms, TalkTales
+                    gives users the power to express themselves completely anonymously, and safely.</p>
+            </div>
+
+            <div class="get-started-btn">
+                <a href="{{ url_for('login') }}" class="btn btn-primary"> Get Started</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

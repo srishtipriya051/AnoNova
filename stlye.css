@@ -1,0 +1,121 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    .header-box {
+      background: #4C8479;
+      padding: 40px 30px 60px 30px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      color: white;
+      text-align: left;
+      position: relative;
+    }
+
+    .subheading {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .main-heading {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .input-box {
+      width: 90%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #4C8479;
+      border-radius: 30px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
+      color: #4C8479;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+    }
+
+    .checkbox a {
+      color: #4C8479;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 90%;
+      max-width: 300px;
+      padding: 12px;
+      background: #ffffff;
+      color: #4C8479;
+      border: 2px solid #4C8479;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4C8479;
+    }
+
+    .signin-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #4C8479;
+    }
+
+    .signin-text a {
+      color: #4C8479;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .error-msg {
+      color: #4C8479;
+      font-size: 13px;
+      margin-top: -15px;
+      margin-bottom: 10px;
+      display: none;
+    }

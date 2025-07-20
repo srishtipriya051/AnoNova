@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talk Tales Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  <style>
+    .app-title {
+      color: #d2b26f;
+      font-weight: bold;
+      font-family: cursive;
+      margin: 10px 0;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .app-subtitle {
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .alert {
+      background-color: #e3e0ff;
+      color: #4834d4;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .signup-section {
+      margin-top: 20px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .signup-section p {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .signup-btn {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .signup-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    #loginForm {
+      margin-bottom: 15px;
+    }
+
+    #loginForm input {
+      margin-bottom: 15px;
+    }
+
+    #loginForm button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container"  role="main">
+    <div class="app-title" aria-label="Application name">TALK TALES</div>
+    <div class="app-subtitle" aria-label="Application description">COMMUNICATION APP</div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('login') }}" id="loginForm">
+      <input type="text" name="username" placeholder="Enter UserID" aria-label="UserID" required />
+      <input type="password" name="password" placeholder="Password" aria-label="Password" required />
+      <button type="submit" aria-label="Login">Login</button>
+    </form>
+
+    <div class="signup-section">
+      <p>Don't have an account?</p>
+      <a href="{{ url_for('signup') }}" class="signup-btn">Create New Account</a>
+    </div>
+  </div>
+</body>
+
+</html>
